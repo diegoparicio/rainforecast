@@ -1,0 +1,11 @@
+streamlit
+matplotlib
+seaborn
+scikit-learn
+kagglehub
+
+plotly
+
+sigstore
+
+pandas
