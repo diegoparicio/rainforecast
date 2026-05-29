@@ -2,5 +2,4 @@ venv/
 app-previous.py
 git_add.txt
 __pycache__/
-weather_forecast_data.csv
 weather-forecast-classification.ipynb

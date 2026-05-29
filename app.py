@@ -19,13 +19,14 @@ from sklearn.naive_bayes import GaussianNB
 # Métricas
 from sklearn.metrics import accuracy_score, confusion_matrix, r2_score
 
-import kagglehub
-import pathlib
+# import kagglehub
+# import pathlib
 
 # Cargar datos
 @st.cache_data
 def cargar_datos():
-    eltiempo_csv = pathlib.Path(kagglehub.dataset_download('zeeshier/weather-forecast-dataset')) / "weather_forecast_data.csv"
+    # eltiempo_csv = pathlib.Path(kagglehub.dataset_download('zeeshier/weather-forecast-dataset')) / "weather_forecast_data.csv"
+    eltiempo_csv = 'data/weather_forecast_data.csv'
     datos = pd.read_csv(eltiempo_csv)
     return datos
 
@@ -48,7 +49,7 @@ for columna in columnas_a_codificar:
     datos[columna + '_codificada'] = le.fit_transform(datos[columna])
     label_encoders[columna] = le
 
-st.image('media/portada.png', use_container_width=True)    
+st.image('media/portada.png', width='stretch')
 st.write("@diegoparicio")
 
 st.subheader("Datos de clima registrados (head)")
